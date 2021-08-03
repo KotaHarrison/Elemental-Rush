@@ -23,7 +23,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     bool isGrounded;
     bool canDoubleJump;
-
+    //The function for what to do when jumping, the math behind calculating and applying the force for the jump.
     void Jump()
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -52,6 +52,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if (isGrounded)
             {
+                //Function that is called from above telling the system what to do
                 Jump();
                 canDoubleJump = true;
             }
